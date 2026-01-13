@@ -1,0 +1,24 @@
+/* src/index.css */
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw; /* Garante que o corpo tenha a largura da tela */
+  min-height: 100vh;
+  background-color: #121a36; /* Cor do seu fundo para não ficar branco nas bordas */
+}
+
+#root {
+  width: 100%; /* Isso é o mais importante! */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,535 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.modal {
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.closeButton {
+  border: 0;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.closeButton:hover {
+  background: #f3f3f3;
+}
+
+.form {
+  padding: 18px 22px 22px;
+}
+.formError {
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fff1f0;
+  border: 1px solid #ffccc7;
+  color: #a8071a;
+  font-size: 0.95rem;
+}
+
+.photoSection {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.photoCircle {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  border: 2px dashed #d7d7d7;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoIcon {
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.photoLabel {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.photoActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fileInput {
+  display: none;
+}
+
+.photoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.photoButton:hover {
+  background: #f7f7f7;
+}
+
+.photoHint {
+  font-size: 12px;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.required {
+  color: #d13b3b;
+  font-weight: 700;
+}
+
+.control input,
+.control select,
+.control textarea {
+  width: 100%;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+}
+
+.control textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.control input:focus,
+.control select:focus,
+.control textarea:focus {
+  border-color: #c8c8c8;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Readonly (mock vindo do login/db) */
+.control input.readonly {
+  background: #f3f3f3;
+  color: #444;
+  cursor: not-allowed;
+}
+
+.control input.readonly:focus {
+  box-shadow: none;
+  border-color: #d7d7d7;
+}
+
+.hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.errorText {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #d13b3b;
+}
+
+.linkedinWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.linkedinPrefix {
+  padding: 11px 12px;
+  background: #f3f3f3;
+  font-size: 13px;
+  color: #333;
+  border-right: 1px solid #d7d7d7;
+  white-space: nowrap;
+}
+
+.linkedinInput {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.cancelButton {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d7d7d7;
+  background: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.cancelButton:hover {
+  background: #f7f7f7;
+}
+
+.submitButton {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 0;
+  background: #f27a1a;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  min-width: 220px;
+}
+
+.submitButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 780px) {
+  .photoSection {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+  }
+}
+
+/* Linha do input de data + botão 📅 */
+.dateRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 46px;
+  gap: 10px;
+  align-items: center;
+}
+
+.calendarBtn {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.calendarBtn:hover {
+  background: #f7f7f7;
+}
+
+/* input date escondido */
+.hiddenDate {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+/* só mostra erro depois de tentar enviar */
+.validated .control input:required:invalid,
+.validated .control select:required:invalid,
+.validated .control textarea:required:invalid {
+  border-color: #f27a1a;
+  box-shadow: 0 0 0 3px rgba(242, 122, 26, 0.18);
+}
+
+.suggestionsWrapper {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #eee;
+}
+
+.suggestionsTitle {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.suggestionsScroll {
+  max-height: 180px; /* Limita a altura das sugestões */
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Estilo da Categoria */
+.suggestionCategory {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.categoryLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  width: 100%; /* Força a categoria a ficar em cima */
+  margin-bottom: 2px;
+}
+
+/* As "tags" de sugestão */
+.suggestionTag {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.suggestionTag:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+  color: #333;
+}
+
+/* Estilo quando a sugestão já foi clicada/selecionada */
+.suggestionTag.active {
+  background: #fff4ec;
+  border-color: #f27a1a;
+  color: #f27a1a;
+}
+
+/* Scrollbar fina para não ficar feio */
+.suggestionsScroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.suggestionsScroll::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+/* Container Principal */
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.inputRelative {
+  position: relative;
+}
+
+/* Campo de Busca Principal */
+.skillInputMain {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e8e8e8; /* Borda levemente mais grossa para parecer robusto */
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.skillInputMain:focus {
+  border-color: #f27a1a; /* Cor principal do seu tema */
+  background-color: #fffaf6;
+  box-shadow: 0 0 0 4px rgba(242, 122, 26, 0.1);
+}
+
+/* Dropdown de Sugestões (Estilo Option Moderno) */
+.suggestionsDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais profunda para flutuar */
+  z-index: 1000;
+  padding: 6px;
+  border: 1px solid #eee;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownOption {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+.dropdownOption:hover {
+  background: #f27a1a;
+  color: #fff;
+}
+
+.dropdownOption::after {
+  content: '+';
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+.dropdownOption:hover::after {
+  opacity: 1;
+}
+
+/* Área de Tags Abaixo */
+.selectedSkillsArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 4px 2px;
+}
+
+/* Estilo das Habilidades Escolhidas (Tags) */
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  color: #2d3436;
+  padding: 6px 14px;
+  border-radius: 20px; /* Estilo pílula */
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.skillTag:hover {
+  background: #fff;
+  border-color: #f27a1a;
+  color: #f27a1a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(242, 122, 26, 0.15);
+}
+
+/* Botão de Remover dentro da Tag */
+.skillTag button {
+  background: #e9ecef;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #868e96;
+  transition: all 0.2s;
+}
+
+.skillTag:hover button {
+  background: #f27a1a;
+  color: #fff;
+}
+
+.skillTag button:hover {
+  transform: scale(1.1);
+}

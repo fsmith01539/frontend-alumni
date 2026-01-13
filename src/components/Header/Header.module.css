@@ -1,0 +1,85 @@
+.header {
+  background-color: #121a36; /* Azul escuro oficial */
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #cc4b00; /* Linha laranja de detalhe */
+  width: 100%;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff; /* Texto branco para contraste */
+  font-size: 1.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* Estilização do botão de Login/Entrar */
+.loginBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginBtn:hover {
+  background-color: #ffffff;
+  color: #121a36;
+}
+
+/* Botão de Adicionar (quando logado) */
+.addBtn {
+  background-color: #cc4b00;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.addBtn:hover {
+  transform: scale(1.05);
+  background-color: #e65500;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem; /* Espaço entre Adicionar e Sair */
+  align-items: center;
+}
+
+.logoutBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}

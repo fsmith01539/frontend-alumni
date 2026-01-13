@@ -1,0 +1,117 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  flex: 1; /* Faz o conteúdo crescer para empurrar o footer */
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.resultsInfo {
+  color: #e9ebf7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.noResults {
+  color: #fff;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  opacity: 0.7;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.emptyState h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #cc4b00; /* Laranja para destaque */
+}
+
+.emptyState p {
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.clearBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearBtn:hover {
+  background-color: #ffffff;
+  color: #121a36;
+}
+
+/* Container que imita a sua grid de verdade */
+.loadingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* O card "fantasma" */
+.skeletonCard {
+  height: 320px; /* Ajuste para a altura aproximada do seu AlumniCard */
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 12px;
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+}
+
+/* Animação de brilho correndo pelo card */
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Opcional: Estilização do texto de carregamento abaixo dos cards */
+.loadingText {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+  font-weight: 500;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

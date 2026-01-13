@@ -1,0 +1,96 @@
+.footer {
+  color: #ffffff;
+  padding: 3rem 2rem;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Alinha os blocos pela base */
+  gap: 2rem;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  color: #d4a017;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 1rem;
+  color: #cbd5e1; /* Branco levemente acinzentado */
+  margin: 0 0 1rem 0;
+}
+
+.legalInfo {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.legalInfo p {
+  margin: 2px 0;
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.iconCircle {
+  background-color: white;
+  width: 38px; /* Tamanho do círculo */
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a192f; /* Cor azul marinho do fundo */
+  transition: all 0.2s ease-in-out;
+}
+
+.iconCircle:hover {
+  transform: translateY(-2px);
+  background-color: #f0f0f0;
+}
+
+.legalLink {
+  color: #d4a017; /* Tom dourado da imagem */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.legalLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightSection {
+    align-items: center;
+  }
+}
